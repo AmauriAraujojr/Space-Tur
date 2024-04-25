@@ -1,0 +1,7 @@
+@use "./abstracts/" as *;
+
+body,
+button{
+    color: $brand3;
+    font-size: 1rem;
+}

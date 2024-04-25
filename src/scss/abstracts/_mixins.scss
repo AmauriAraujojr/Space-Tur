@@ -1,0 +1,41 @@
+@use "./variables" as*;
+
+@mixin Heading-One {
+    font-size: 9.375rem;
+    font-weight: 400;
+}
+@mixin Heading-Two {
+    font-size: 6.25rem;
+    font-weight: 400;
+}
+@mixin Heading-Three {
+    font-size: 3.5rem;
+    font-weight: 400;
+}
+@mixin Heading-Four{
+    font-size: 2rem;
+    font-weight: 400;
+}
+@mixin Heading-Five{
+    font-size: 1.75rem;
+    font-weight: 400;
+    letter-spacing:4.75px;
+    color:$brand2;
+}
+@mixin Subheading-One{
+    font-size: 1.75rem;
+    font-weight: 400;
+}
+@mixin Subheading-Two{
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+@mixin Nav-Test{
+    font-size: 1rem;
+    font-weight: 400;
+    color:$brand3;
+}
+@mixin Body{
+    font-size: 1.125rem;
+    font-weight: 400;
+}
