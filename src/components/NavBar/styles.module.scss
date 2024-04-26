@@ -5,47 +5,140 @@
     height: 96px;
     display: flex;
     align-items: center;
-    justify-content:flex-end;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    right: 0;
 
-    div {
-        width: 40%;
-        background-color: red;
-        height: 100%;
+    @media(min-width: 600px) {
+        justify-content: center;
+
     }
 
-    .nav {
-        position: relative;
+    @media(min-width: 1086px) {
+        top: 50px;
+
+    }
+
+    .box_img {
+        padding: 0 50px;
+        width: 10%;
         display: flex;
         align-items: center;
-        justify-content: center;
-        width: 50%;
+        position: relative;
 
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba($brand3, 50%); // Defina a opacidade aqui
-            z-index: -1;
+        @media(min-width: 1086px) {
+            width: 40%;
+
         }
 
-        ul {
+        .line {
+            display: none;
+            position: absolute;
+            right: -10px;
+            width: 473px;
+            z-index: 1;
+            height: 1px;
+            background-color: $brand6;
+
+            @media(min-width: 1086px) {
+                display: block;
+            }
+        }
+
+
+    }
+
+    .menu {
+
+        padding: 0 50px;
+
+
+        @media(min-width: 600px) {
+            display: none;
+        }
+    }
+
+    .box_nav {
+        display: none;
+        height: 100%;
+        width: 80%;
+        position: relative;
+
+        &:hover {
+            .overlay {
+                background: radial-gradient($brand2, $brand5);
+                opacity: 45%;
+            }
+
+        }
+
+        @media(min-width: 600px) {
+            display: block;
+        }
+
+        @media(min-width: 1086px) {
+            width: 55%;
+
+        }
+
+        .overlay {
             width: 100%;
+            height: 100%;
+            background-color: $brand6;
+            opacity: 7%;
+
+
+
+
+        }
+
+        .nav {
+            width: 100%;
+            height: 100%;
             display: flex;
             align-items: center;
-            justify-content: flex-start;
-            gap: 70px;
-            padding: 30px;
-            height: 100%;
+            justify-content: space-around;
+            background: none;
+            position: absolute;
+            top: 0;
 
-            li {
-                a {
-                    text-decoration: none;
-                    @include Nav-Test;
+            @media(min-width: 1086px) {
+                justify-content: center;
+                gap: 50px;
+            }
+
+
+            a {
+                @include Nav-Test;
+                text-decoration: none;
+                display: flex;
+                gap: 10px;
+                height: 90%;
+                align-items: center;
+                max-width: 100%;
+
+                &:hover {
+                    border-bottom: 2px solid $brand6;
+                }
+
+                &:focus {
+                    border-bottom: 2px solid $brand3;
+                }
+
+
+                span {
+                    font-weight: 600;
+                    display: none;
+                }
+
+                @media(min-width: 1086px) {
+                    span {
+                        display: block;
+                    }
                 }
             }
         }
     }
+
 }
