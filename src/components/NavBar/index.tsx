@@ -4,7 +4,6 @@ import Image from "next/image";
 import logo from "../../assets/shared/logo.svg";
 import menu from "../../assets/shared/icon-hamburger.svg";
 import Link from "next/link";
-import background from "../../assets/home/background-home-desktop.jpg";
 
 export const NavBar = () => {
   return (
