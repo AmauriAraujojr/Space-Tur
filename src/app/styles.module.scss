@@ -1,23 +1,23 @@
-
 @use "../scss/abstracts/" as*;
-.main{
+
+.main {
     width: 100vw;
     height: 100vh;
     background-image: url("../assets/home/background-home-mobile.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
 
-    p{    
+
+    p {
         @include Heading-Five;
     }
 
-    @media(min-width: 700px){
+    @media(min-width: 700px) {
         background-image: url("../assets/home/background-home-tablet.jpg");
 
     }
 
-    @media(min-width: 1086px){
+    @media(min-width: 1086px) {
         background-image: url("../assets/home/background-home-desktop.jpg");
 
     }

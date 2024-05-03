@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Bellefair,Barlow_Condensed,Barlow } from "next/font/google";
 import "@/scss/main.scss";
-import { Provider } from "react-redux";
-import store from "@/store";
 import TestProvider from "@/providers/TestContext";
 
 
@@ -37,6 +35,7 @@ export default function RootLayout({
           <TestProvider>
 
           {children}
+
           </TestProvider>
           
           </body>
